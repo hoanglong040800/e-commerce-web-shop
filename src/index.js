@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './containers/App'
+import MainRoute from './routes/MainRoute'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MainRoute />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 )
