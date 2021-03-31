@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Home from '../containers/Home'
-import About from '../containers/About'
+import { Home, About } from '../containers'
 
 const MainRoute = () => {
   return (

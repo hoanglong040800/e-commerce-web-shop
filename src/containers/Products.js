@@ -1,6 +1,6 @@
 import { Grid } from '@material-ui/core'
 
-import ProductCard from '../components/ProductCard'
+import { ProductCard } from '../components'
 
 const products = [
   {
@@ -55,7 +55,7 @@ const products = [
 
 const Products = () => {
   return (
-    <Grid container justify="center" spacing={2}>
+    <Grid container justify="center">
       {products.map(el => (
         <Grid item xs={6} sm={4} md={3} lg={3}>
           <ProductCard key={el.id} product={el} />

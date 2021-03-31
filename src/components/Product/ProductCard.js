@@ -1,4 +1,5 @@
 import {
+  makeStyles,
   Card,
   CardActions,
   CardContent,
@@ -9,10 +10,12 @@ import {
 import { AddShoppingCart } from '@material-ui/icons'
 
 const ProductCard = ({ product }) => {
+  const classes = useStyles()
+
   return (
-    <Card>
+    <Card className={classes.root}>
       <CardMedia
-        style={{ height: 150 }}
+        className={classes.cardMedia}
         image={product.image}
         title={product.name}
       />
@@ -25,13 +28,7 @@ const ProductCard = ({ product }) => {
         </Typography>
       </CardContent>
 
-      <CardActions
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
+      <CardActions className={classes.cardFooter}>
         <Typography variant="body2">{product.price}đ</Typography>
 
         <IconButton aria-label="Add">
@@ -41,5 +38,19 @@ const ProductCard = ({ product }) => {
     </Card>
   )
 }
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    margin: 10,
+  },
+  cardMedia: {
+    height: 150,
+  },
+  cardFooter: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+}))
 
 export default ProductCard

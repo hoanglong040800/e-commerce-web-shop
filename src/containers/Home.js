@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom'
-
-import Product from './Products'
+import { Products } from './'
+import MainLayout from './layouts/MainLayout'
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-      <Product />
-    </div>
+    <MainLayout>
+      <h1 style={{ fontSize: 30 }}>Home</h1>
+
+      <Products />
+    </MainLayout>
   )
 }
 

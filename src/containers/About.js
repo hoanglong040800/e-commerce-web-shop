@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom'
+import MainLayout from './layouts/MainLayout'
 
 const About = () => {
   return (
-    <div>
-      About me
-      <Link to="/">Go to Home</Link>
-    </div>
+    <MainLayout>
+      <h1>About</h1>
+    </MainLayout>
   )
 }
 
